@@ -1,26 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule }   from '@angular/common';
 
 @Component({
+  moduleId:module.id,
   selector: 'receive',
-  template:`
-  f
-  f
-  f
-  f
-  f
-  f
-  f
-  f
-  f
-  f
-  f
-
-  f
-  f
-  f
-  f
-  f
-  f
-  `,
+  templateUrl:'receive.component.html'
 })
 export class ReceiveComponent  {   }

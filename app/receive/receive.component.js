@@ -14,8 +14,9 @@ var ReceiveComponent = (function () {
     }
     ReceiveComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'receive',
-            template: "\n  f\n  f\n  f\n  f\n  f\n  f\n  f\n  f\n  f\n  f\n  f\n\n  f\n  f\n  f\n  f\n  f\n  f\n  ",
+            templateUrl: 'receive.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], ReceiveComponent);

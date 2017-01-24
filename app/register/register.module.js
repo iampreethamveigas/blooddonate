@@ -9,15 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
 var register_component_1 = require('./register.component');
+var register_routing_module_1 = require('./register.routing.module');
 var RegisterModule = (function () {
     function RegisterModule() {
     }
     RegisterModule = __decorate([
         core_1.NgModule({
-            imports: [],
+            imports: [common_1.CommonModule, register_routing_module_1.RegisterRoutingModule],
             declarations: [register_component_1.RegisterComponent],
-            export: [register_component_1.RegisterComponent]
+            exports: [register_component_1.RegisterComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], RegisterModule);

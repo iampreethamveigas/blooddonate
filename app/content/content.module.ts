@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router'; 
 
 import{ ContentComponent } from './content.component';
-import {ReceiveComponent } from './receive/receive.component';
-import {RegisterComponent } from './register/register.component';
-import {RegisterModule } from './register/register.module';
-import {ReceiveModule } from './receive/receive.module';
+
 // import {ContentRoutModule } from './content.routing.module';
 // export const routes: Routes = [
 //   { path: '', redirectTo: 'contact', pathMatch: 'full'},
@@ -12,19 +10,17 @@ import {ReceiveModule } from './receive/receive.module';
 //   { path: 'heroes', loadChildren: 'app/hero/hero.module#HeroModule' }
 // ];
 
-export const routes: Routes = [
-  {path:" ", component: RegisterComponent},
-    {path:"Receive" , component: ReceiveComponent}
-];
+const appRoutes : Routes =[
+    {path:'', redirectTo: '/Register', pathMatch: 'full' },
+    
+]
+
 @NgModule({
-    imports: [  RouterModule.forRoot(routes),
-          RegisterModule,
-          ReceiveModule
+    imports: [RouterModule.forRoot(appRoutes)
     ],
-    declarations: [ContentComponent,RegisterComponent,ReceiveComponent],
+    declarations: [ContentComponent],
     exports:[ContentComponent],
     providers: []
-
 })
 
 export class ContentModule { }

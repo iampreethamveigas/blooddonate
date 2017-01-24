@@ -9,13 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
 var receive_component_1 = require('./receive.component');
+var receive_routing_module_1 = require('./receive.routing.module');
 var ReceiveModule = (function () {
     function ReceiveModule() {
     }
     ReceiveModule = __decorate([
         core_1.NgModule({
-            imports: [],
+            imports: [common_1.CommonModule, receive_routing_module_1.ReceiveRoutingModule],
             declarations: [receive_component_1.ReceiveComponent],
             exports: [receive_component_1.ReceiveComponent],
             providers: []

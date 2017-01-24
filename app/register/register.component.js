@@ -14,8 +14,9 @@ var RegisterComponent = (function () {
     }
     RegisterComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'register',
-            template: "\n  ddd\n  ",
+            templateUrl: 'register.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], RegisterComponent);

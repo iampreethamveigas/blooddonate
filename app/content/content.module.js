@@ -9,31 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var content_component_1 = require('./content.component');
-var receive_component_1 = require('./receive/receive.component');
-var register_component_1 = require('./register/register.component');
-var register_module_1 = require('./register/register.module');
-var receive_module_1 = require('./receive/receive.module');
 // import {ContentRoutModule } from './content.routing.module';
 // export const routes: Routes = [
 //   { path: '', redirectTo: 'contact', pathMatch: 'full'},
 //   { path: 'crisis', loadChildren: 'app/crisis/crisis.module#CrisisModule' },
 //   { path: 'heroes', loadChildren: 'app/hero/hero.module#HeroModule' }
 // ];
-exports.routes = [
-    { path: " ", component: register_component_1.RegisterComponent },
-    { path: "Receive", component: receive_component_1.ReceiveComponent }
+var appRoutes = [
+    { path: '', redirectTo: '/Register', pathMatch: 'full' },
 ];
 var ContentModule = (function () {
     function ContentModule() {
     }
     ContentModule = __decorate([
         core_1.NgModule({
-            imports: [RouterModule.forRoot(exports.routes),
-                register_module_1.RegisterModule,
-                receive_module_1.ReceiveModule
+            imports: [router_1.RouterModule.forRoot(appRoutes)
             ],
-            declarations: [content_component_1.ContentComponent, register_component_1.RegisterComponent, receive_component_1.ReceiveComponent],
+            declarations: [content_component_1.ContentComponent],
             exports: [content_component_1.ContentComponent],
             providers: []
         }), 
